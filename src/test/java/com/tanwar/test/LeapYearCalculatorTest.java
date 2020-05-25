@@ -13,9 +13,18 @@ public class LeapYearCalculatorTest {
 		leapYearCalculator = new LeapYearCalculator();
 	}
 
+
+	// All years divisible by 400 ARE leap years (so, for example, 2000 was indeed a leap year)
 	@Test
-	public void shouldVerifyLeapYear() {
+	public void shouldVerifyLeapYearDivisibleBy400() {
 		Assert.assertTrue(leapYearCalculator.isLeapYear(1600));
+	}
+
+	
+	// All years divisible by 100 but not by 400 are NOT leap years (so, for example, 1700, 1800, and 1900 were NOT leap years, NOR will 2100 be a leap year),
+	@Test
+	public void shouldVerifyLeapYearDivisibleBy100ButNot400() {
+		Assert.assertTrue(leapYearCalculator.isLeapYear(1700));
 	}
 
 }
