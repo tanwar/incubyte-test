@@ -26,5 +26,11 @@ public class LeapYearCalculatorTest {
 	public void shouldVerifyLeapYearDivisibleBy100ButNot400() {
 		Assert.assertFalse(leapYearCalculator.isLeapYear(1700));
 	}
+	
+	// All years divisible by 4 but not by 100 ARE leap years
+	@Test
+	public void shouldVerifyLeapYearDivisibleBy4ButNot100() {
+		Assert.assertTrue(leapYearCalculator.isLeapYear(2008));
+	}
 
 }
