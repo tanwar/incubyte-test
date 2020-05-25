@@ -12,6 +12,10 @@ public class LeapYearCalculator {
 		else if (number % 100 == 0 && number % 400 != 0) {
 			return false;
 		}
+		// All years divisible by 4 but not by 100 ARE leap years
+		else if (number % 4 == 0 && number % 100 != 0) {
+			return true;
+		}
 
 		return false;
 
