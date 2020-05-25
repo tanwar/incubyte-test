@@ -36,7 +36,7 @@ public class LeapYearCalculatorTest {
 	//All years not divisible by 4 are NOT leap years
 	@Test
 	public void shouldVerifyLeapYearNotDivisibleBy4() {
-		Assert.assertTrue(leapYearCalculator.isLeapYear(2018));
+		Assert.assertFalse(leapYearCalculator.isLeapYear(2018));
 	}
 
 }
